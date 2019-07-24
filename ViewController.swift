@@ -63,6 +63,9 @@ class ViewController: UIViewController {
             let restartAction = UIAlertAction(title: "Restart", style: .default) { (UIAlertAction) in
                 self.startOver()
             }
+            alert.addAction(restartAction)
+            
+            present(alert, animated: true, completion: nil)
             
         }
         
@@ -85,6 +88,9 @@ class ViewController: UIViewController {
     
     
     func startOver() {
+        
+        questionNumber = 0
+        nextQuestion()
        
     }
     
